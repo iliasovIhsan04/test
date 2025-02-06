@@ -30,3 +30,14 @@ TheTechRobo
  CommentedSep 4, 2020 at 23:47
 4
 @TheTechRobo36414519 git-gc eventually cleans up old reflog entries, and once nothing references a commit its objects will eventually be cleaned up too. The conditions under which the reflog is cleaned up can be set via git-gc's config options git-scm.com/docs/git-gc#Documentation/git-gc.txt-gcreflogExpire (at the time of this comment, the default expiry for reflog entries is 90 days for commits which are reachable, and 30 days for commits which are unreachable from curr
+
+
+
+Before answering, let's add some background, explaining what this HEAD is.
+
+First of all what is HEAD?
+HEAD is simply a reference to the current commit (latest) on the current branch.
+There can only be a single HEAD at any given time (excluding git worktree).
+
+The content of HEAD is stored inside .git/HEAD and it contains the 40 bytes SHA-1 of the current commit.
+wefwefwef
