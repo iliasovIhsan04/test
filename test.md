@@ -1,0 +1,1 @@
+im syimyk frontend dev
